@@ -1,0 +1,11 @@
+@use "../base/base";
+@use "../base/reset";
+@use "../global" as *;
+
+.news{
+  padding-top: rem(50px);
+}
+
+.news__inner{
+  margin-top: rem(64px);
+}

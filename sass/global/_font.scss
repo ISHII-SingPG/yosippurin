@@ -1,0 +1,16 @@
+@use "sass:math";
+// 文字フォントの種類
+$base-font: "Noto Sans JP", sans-serif;
+$second-font: "Mochiy Pop One", sans-serif;
+$third-font:"Roboto", sans-serif;
+
+// 文字の太さ
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+@mixin fz($size: 16) {
+    font-size: ($size / 10) + rem;
+  }
+

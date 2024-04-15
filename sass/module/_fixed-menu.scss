@@ -1,0 +1,150 @@
+@use "../base/base";
+@use "../base/reset";
+@use "../global" as *;
+
+.pc-shop-button__warpper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 129px;
+  height: 129px;
+  z-index: 999;
+  background-color: $orange;
+  clip-path: circle(122px at 96% 5%);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.pc-shop-button__warpper.is-active {
+  top: rem(300px);
+  width: rem(67px);
+  height: rem(189px);
+  clip-path: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.pc-shop-button__warpper .pc-shop-button__link {
+  display: inline-block;
+  color: $white;
+  font-size: rem(18px);
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  padding: rem(23px) rem(5px) 0 rem(30px);
+
+  &:hover {
+      opacity: 1;
+      transition: .3s all;
+      background-color: $brown2;
+  }
+}
+
+.pc-shop-button__warpper.is-active .pc-shop-button__link {
+  font-size: rem(16px);
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  padding: rem(23px) rem(20px) rem(5px);
+}
+
+.pc-shop-button__warpper.is-active .pc-shop-button__newline {
+  display: none;
+}
+
+
+/*メニューをページ下部に固定*/
+.sp-shop-button__wrapper {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  font-size: 0;
+  display: none;
+  z-index: 99;
+}
+
+/*メニューを横並びにする*/
+.sp-shop-button__wrapper .sp-shop-button__items {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+}
+
+.sp-shop-button__wrapper .sp-shop-button__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.sp-shop-button__wrapper .sp-shop-button__item:first-child {
+  width: 65vw;
+  background: $orange;
+}
+
+.sp-shop-button__wrapper .sp-shop-button__item:last-child {
+  background: $white;
+  width: 35vw;
+  border-top: 2px solid $orange;
+  border-bottom: 2px solid $orange;
+  border-right: 2px solid $orange;
+  box-sizing: border-box;
+  outline-offset: -2px;
+}
+
+.sp-shop-button__wrapper .sp-shop-button__item a {
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: rem(20px) rem(10px);
+  font-size: rem(15px);
+  font-weight: $bold;
+  letter-spacing: 0.4em;
+  @include mq("sp") {
+      font-size: rem(12px);
+  }
+}
+
+.sp-shop-button__link {
+  color: $white;
+}
+
+.sp-pagetop__link {
+  color: $black;
+}
+
+.pc-pagetop-button__link{
+  position: fixed;
+  bottom: rem(100px);
+  right: 0;
+  display: inline-block;
+  background-color: $white;
+  border-top: 2px solid $brown;
+  border-left: 2px solid $brown;
+  border-bottom: 2px solid $brown;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  color: $brown;
+  font-size: rem(14px);
+  font-weight: bold;
+  width: rem(115px);
+  z-index: 999;
+  padding: rem(15px) rem(20px);
+
+  &:hover {
+      opacity: 1;
+      transition: .3s all;
+      color: $white;
+      background-color: $brown;
+  }
+}
+
+.pc-pagetop-button__link-icon {
+  margin-left: rem(5px);
+}

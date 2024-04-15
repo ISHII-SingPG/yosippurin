@@ -1,0 +1,271 @@
+@use "../base/base";
+@use "../base/reset";
+@use "../global" as *;
+
+// ヘッダー
+.header {
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 106px;
+  z-index: 100;
+  background-color: $beige;
+
+  @include mq("lg") {
+      height: auto;
+  }
+}
+
+.header.is-active {
+  position: relative;
+  background-color: rgba($yellow, 0.7);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: rem(30px);
+  height: inherit;
+
+  @include mq("lg") {
+      padding-left: 15px;
+  }
+
+  @include mq("sp") {
+      padding: 0 15px;
+  }
+}
+
+.header__title {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  height: inherit;
+}
+
+.header__title-link {
+  &:hover {
+      opacity: 1;
+  }
+}
+
+.header__logo {
+  width: 208px;
+
+  @include mq("md") {
+      width: 154px;
+  }
+}
+
+.header__nav {
+  height: inherit;
+  padding-right: rem(169px);
+}
+
+.header__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: inherit;
+}
+
+.header__item:first-child {
+  @include mq("lg") {
+      margin-left: 30px;
+  }
+}
+
+.header__item:not(:first-child) {
+  margin-left: 40px;
+
+  @include mq("lg") {
+      margin-left: 30px;
+  }
+}
+
+.header__item {
+  height: inherit;
+
+  @include mq("lg") {
+      height: 53px;
+  }
+}
+
+.header__link {
+  font-size: rem(16px);
+  font-weight: $medium;
+  letter-spacing: 0.05em;
+  color: $black;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+// ハンバーガーメニュー
+.hamburger {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  width: rem(66px);
+  height: rem(63px);
+  border-bottom-left-radius: 30px;
+  background-color: $brown;
+  cursor: pointer;
+}
+
+.hamburger.is-active {
+  top: 15px;
+  background-color: transparent;
+}
+
+.hamburger__line {
+  position: absolute;
+  display: inline-block;
+  left: 22px;
+  width: 37%;
+  height: 2px;
+  background-color: $white;
+  transition: transform 0.3s;
+}
+
+.hamburger__line:first-child {
+  top: 22px;
+}
+
+.hamburger__line:nth-child(2) {
+  top: 30px;
+  transition: opacity 0.3s;
+}
+
+.hamburger__line:nth-child(3) {
+  top: 38px;
+}
+
+.hamburger.is-active span {
+  background-color: $white;
+}
+
+.hamburger.is-active span:first-child {
+  width: 30.23px;
+  top: 16px;
+  transform: rotate(-45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-active span:nth-child(3) {
+  width: 30.23px;
+  top: 16px;
+  transform: rotate(45deg);
+}
+
+// ドロワーメニュー
+.circle-bg {
+  position: fixed;
+  z-index: 1000;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: $brown;
+  transform: scale(0);
+  right: -50px;
+  top: -50px;
+  transition: all .6s;
+}
+
+.circle-bg.is-active {
+  transform: scale(50);
+}
+
+.drawer-menu__inner {
+  display: none;
+  position: fixed;
+  z-index: 5000;
+  width: 100%;
+  height: 100vh;
+  padding: 0 rem(10px);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.drawer-menu.is-active .drawer-menu__inner {
+  display: block;
+}
+
+.drawer-menu__logo {
+  width: rem(198px);
+  height: rem(84px);
+  margin: 0 auto;
+}
+
+.drawer-menu__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  row-gap: rem(20px);
+  column-gap: rem(20px);
+  margin-top: rem(35px);
+  z-index: 5000;
+}
+
+.drawer-menu__link {
+  display: inline-block;
+  width: 100%;
+  color: $black;
+  font-size: rem(12px);
+  font-weight: $medium;
+  background-color: $white;
+  border-radius: 30px;
+  padding: rem(24px) rem(10px);
+  text-align: center;
+
+  @include mq("sp") {
+      font-size: rem(10px);
+      padding: rem(15px) rem(8px);
+  }
+}
+
+.drawer-menu__shop-button {
+  display: inline-block;
+  width: 100%;
+  background-color: $yellow;
+  color: $black;
+  text-align: center;
+  padding: rem(20px);
+  font-size: rem(16px);
+  font-weight: $medium;
+  margin-top: rem(55px);
+  border-radius: 30px;
+}
+
+.drawer-menu-sns__items {
+  margin: rem(28px) auto;
+  display: flex;
+  justify-content: center;
+  column-gap: rem(20px);
+}
+
+.drawer-menu-sns__item {
+  color: $white;
+}
+
+.drawer-menu-sns__link {
+  color: $white;
+  font-size: 1.5em;
+}
+
+.drawer-menu.is-active .drawer-menu__logo,
+.drawer-menu.is-active .drawer-menu__item,
+.drawer-menu.is-active .drawer-menu__shop-button,
+.drawer-menu.is-active .drawer-menu-sns__item {
+  animation-name: fadeInDown;
+  animation-duration: 1s;
+  animation-delay: .2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}

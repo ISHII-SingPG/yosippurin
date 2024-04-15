@@ -1,0 +1,52 @@
+@use "../base/base";
+@use "../base/reset";
+@use "../global" as *;
+
+.c-button {
+  position: relative;
+  display: inline-block;
+  background-color: $brown;
+  border-radius: 30px;
+  padding: rem(20px) rem(91px);
+  color: $white;
+  font-size: rem(16px);
+  font-weight: $medium;
+  transition: background-color .3s;
+
+  @include mq("md") {
+      font-size: rem(14px);
+      padding: rem(23px) rem(91px);
+  }
+  &:hover {
+      opacity: 1;
+      background-color: $brown2;
+  }
+}
+
+.c-button i {
+  margin-right: 14px;
+}
+
+.c-button.c-button--back,
+.c-button.c-button--next {
+  align-items: center;
+  padding: rem(19px) rem(50px);
+  background-color: $white;
+  color: $brown;
+  border: 2px solid $brown;
+  text-decoration: none;
+
+  &:hover {
+      opacity: 1;
+      background-color: $brown;
+      color: $white;
+  }
+}
+
+.c-button.c-button--list {
+  padding: rem(19px) rem(50px);
+}
+
+.c-button--submit {
+  padding: 16px 74px;
+}

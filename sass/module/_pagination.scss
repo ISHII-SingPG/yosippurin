@@ -1,0 +1,47 @@
+@use "../base/base";
+@use "../base/reset";
+@use "../global" as *;
+
+/* ページネーション */
+.pagination {
+  margin-top: rem(55px);
+}
+
+// ページネーションの要素を横並びにする
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: rem(9px);
+}
+
+// 前へ、次へリンクのスタイル
+.pagination__arrow {
+  color: $brown;
+}
+
+// それぞれのページ番号のスタイル
+.page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(40px);
+  height: rem(40px);
+  color: $black;
+  background-color: $white;
+  border-radius: rem(20px);
+  font-weight: bold;
+}
+
+// 現在のページ番号のCSS（色を反転させている）
+.page-numbers.current {
+  color: $white;
+  background-color: $orange;
+}
+
+// ボーダーラインを打ち消す
+.page-numbers.dots,
+.page-numbers.prev,
+.page-numbers.next {
+  border: none;
+  background-color:transparent;
+}

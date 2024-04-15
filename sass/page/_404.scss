@@ -1,0 +1,50 @@
+@use "../base/base";
+@use "../base/reset";
+@use "../global" as *;
+
+.p-404 {
+  padding-top: rem(80px);
+  padding-bottom: rem(182px);
+  padding-left: rem(107px);
+  padding-right: rem(107px);
+  background-color: $beige;
+  @include mq("md") {
+      padding-left: rem(20px);
+      padding-right: rem(20px);
+  }
+}
+
+.p-404__inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-404__title {
+  font-family: $second-font;
+  font-size: rem(64px);
+  letter-spacing: 0.05em;
+  font-weight: $bold;
+  color: $brown2;
+  @include mq("md") {
+      font-size: rem(28px);
+  }
+}
+
+.p-404__text {
+  margin-top: 20px;
+  @include mq("md") {
+      margin-top: 40px;
+  }
+}
+
+.p-404__img{
+  width: 495px;
+  aspect-ratio: 99 / 53;
+  margin-top: rem(20px);
+}
+
+.p-404__button {
+  margin-top: rem(50px);
+}

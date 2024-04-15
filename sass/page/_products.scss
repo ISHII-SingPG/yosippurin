@@ -1,0 +1,89 @@
+@use "../base/base";
+@use "../base/reset";
+@use "../global" as *;
+
+.products-detail__box{
+  background-color: $white;
+  padding: rem(45px) rem(30px);
+  border-radius: rem(20px);
+  @include mq("lg") {
+      padding: rem(40px) rem(30px);
+  }
+  @include mq("md") {
+      padding: rem(40px) rem(20px) rem(50px);
+  }
+}
+
+.products-detail__top{
+  display: flex;
+  column-gap: rem(26px);
+  @include mq("md") {
+      flex-direction: column-reverse;
+      row-gap: rem(30px);
+  }
+}
+
+.products-detail__title{
+  font-family: $second-font;
+  font-size: rem(32px);
+  @include mq("md") {
+      text-align: center;
+  }   
+}
+
+.products-detail__img{
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1;
+  @include mq("md") {
+      width: 100%;
+  }
+}
+
+.products-detail__status-wrapper{
+  margin-top: rem(15px);
+  @include mq("md") {
+      margin-top: rem(23px);
+      text-align: center;
+  }
+}
+
+.products-detail__status{
+  display: inline-flex;
+  padding: rem(8px) rem(38px);
+  font-size: rem(12px);
+  background-color: $orange;
+  color: $white;
+  border-radius: rem(20px);
+  @include mq("md") {
+      font-size: rem(11px);
+      padding: rem(8px) rem(24px);
+  }
+}
+
+.products-detail__status.products-detail__status--stop{
+  background-color: $gray2;   
+}
+
+.products-detail__text{
+  margin-top: rem(25px);
+}
+
+.products-detail__food-info{
+  margin-top: rem(22px);
+}
+
+.products-detail__bottom{
+  margin-top: rem(30px);
+  text-align: center; 
+}
+
+.products-detail__price{
+  font-size: rem(24px);
+  line-height: calcLineHeight(24, 28);
+  @include mq("md") {
+      font-size: rem(20px);
+      line-height: calcLineHeight(20, 28);
+  }
+}

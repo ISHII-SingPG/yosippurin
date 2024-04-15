@@ -1,0 +1,29 @@
+@use "../base/base";
+@use "../base/reset";
+@use "../global" as *;
+
+/* パンくず */
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  font-size: rem(15px);
+  font-family: $third-font;
+  color: $brown; 
+  @include mq("md") {
+      font-size: rem(10px);
+      padding-right: rem(10px);
+  }
+}
+
+.breadcrumb a {
+  color: $gray2;
+}
+
+.breadcrumb__between {
+  display: inline-block;
+  margin: 0 rem(10px);
+  color:$gray2;
+}

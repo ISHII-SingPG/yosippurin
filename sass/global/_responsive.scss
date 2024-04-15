@@ -1,0 +1,33 @@
+@use "sass:math";
+
+$container-size-xl: 1440px;
+$container-size-lg: 1200px;
+$inner-size: 1024px;
+$inner-size-md: 800px;
+
+//ブレイクポイントの値
+$breakpoints: (
+  xs: 320,
+  sp: 375,
+  md: 768,
+  lg: 1220,
+  ml: 1320,
+  xl: 1440,
+);
+
+//メディアクエリー
+$mediaqueries: (
+  xs: "screen and (max-width: #{map-get($breakpoints,'xs')}px)",
+  sp: "screen and (max-width: #{map-get($breakpoints,'sp')}px)",
+  md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+  ml: "screen and (max-width: #{map-get($breakpoints,'ml')}px)",
+  xl: "screen and (max-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+// ブレイクポイントの設定
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaqueries, $mediaquery)} {
+    @content;
+  }
+}

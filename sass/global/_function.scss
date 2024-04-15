@@ -1,0 +1,17 @@
+/* ===============================================
+# pxをremに変換
+$px 文字サイズ
+$basepx 基準となるピクセル数
+=============================================== */
+@function rem($px, $basepx: 16px) {
+  @return $px / $basepx * 1rem;
+}
+
+/* ===============================================
+# line-heightを計算する
+$pixels 文字サイズ
+$height figma上のline-height
+=============================================== */
+@function calcLineHeight($pixels , $height) {
+  @return calc($height / $pixels);
+}
