@@ -17,14 +17,14 @@ $post_word = "商品";
       ?>
 
       <div class="contents__wrap-1col">
+      <div class="products-detail">
         <div class="products-detail__box">
           <div class="products-detail__top">
-          <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail( 'full', array( 'class' => 'products-detail__img' ) ); ?>
-          <?php else : ?>
-              <img src="<?php echo esc_url(get_theme_file_uri( "/images/products/products-noimage.jpg" )); ?>)" class="products-detail__img" alt="NoImage画像" />
-          <?php endif ; ?>
-            <!-- <img src="<?php echo esc_url(get_theme_file_uri("/images/product-item02.jpg")); ?>" class="products-detail__img" alt="プレーン"> -->
+            <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail( 'full', array( 'class' => 'products-detail__img' ) ); ?>
+            <?php else : ?>
+                <img src="<?php echo esc_url(get_theme_file_uri( "/images/products/products-noimage.jpg" )); ?>)" class="products-detail__img" alt="NoImage画像" />
+            <?php endif ; ?>
             <div class="products-detail__body">
               <h2 class="products-detail__title"><?php the_title(); ?></h2>
               <div class="products-detail__status-wrapper">
@@ -50,6 +50,8 @@ $post_word = "商品";
             </div>
           <?php endif; ?>
         </div>
+      </div>
+
         <div class="single-nav-wrapper">
           <div class="nav-previous">
             <?php echo get_prev_next_nav(true, $post_word); ?>

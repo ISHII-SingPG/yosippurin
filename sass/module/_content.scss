@@ -1,5 +1,3 @@
-@use "../base/base";
-@use "../base/reset";
 @use "../global" as *;
 
 .enrty__title {
@@ -13,24 +11,24 @@
   padding-bottom: rem(8px);
   border-bottom: 1px solid $brown2;
   @include mq("md") {
-      font-size: 18px;
-      line-height: calcLineHeight(18, 30);
-      margin-top: 10px;
+    font-size: 18px;
+    line-height: calcLineHeight(18, 30);
+    margin-top: 10px;
   }
 }
 
-.enrty__title::before{
+.enrty__title::before {
   position: absolute;
   content: url(../images/pudding-icon.svg);
   width: rem(42px);
-  left:0;
+  left: 0;
 }
 
 .entry__body {
   margin-top: rem(35px);
 }
 
-.entry__body .detail__thumbnail{
+.entry__body .detail__thumbnail {
   max-width: 100%;
   width: auto;
   height: auto;
@@ -39,7 +37,7 @@
 .detail-content {
   margin-top: rem(40px);
   @include mq("md") {
-      margin-top: rem(26px);
+    margin-top: rem(26px);
   }
 }
 
@@ -53,7 +51,7 @@
   border-radius: 5px;
 
   @include mq("md") {
-      font-size: rem(16px);
+    font-size: rem(16px);
   }
 }
 
@@ -65,7 +63,7 @@
 }
 
 .detail-content h4::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -75,7 +73,7 @@
 }
 
 .detail-content h4::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 37%;
   bottom: 0;
@@ -110,20 +108,23 @@
   background-color: $brown;
 }
 
-.detail-content li+li {
+.detail-content li + li {
   margin-top: rem(4px);
 }
 
 .single-nav-wrapper {
   margin-top: rem(72px);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(calc(100% / 3 - rem(56px)), 1fr)); /* カードの間隔を考慮して均等に */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(calc(100% / 3 - rem(56px)), 1fr)
+  ); /* カードの間隔を考慮して均等に */
   column-gap: rem(56px);
   justify-items: center;
   align-items: center;
   @include mq("md") {
-      margin-top: rem(55px);
-      grid-template-columns: 1fr;
-      row-gap: rem(27px);
+    margin-top: rem(55px);
+    grid-template-columns: 1fr;
+    row-gap: rem(27px);
   }
 }

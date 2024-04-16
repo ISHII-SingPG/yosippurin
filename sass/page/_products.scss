@@ -1,19 +1,18 @@
-@use "../base/base";
-@use "../base/reset";
 @use "../global" as *;
 
-.products-detail__box{
-  background-color: $white;
-  padding: rem(45px) rem(30px);
-  border-radius: rem(20px);
-  @include mq("lg") {
-      padding: rem(40px) rem(30px);
-  }
-  @include mq("md") {
-      padding: rem(40px) rem(20px) rem(50px);
+.products-detail{
+  .products-detail__box{
+    background-color: $white;
+    padding: rem(45px) rem(30px);
+    border-radius: rem(20px);
+    @include mq("lg") {
+        padding: rem(40px) rem(30px);
+    }
+    @include mq("md") {
+        padding: rem(40px) rem(20px) rem(50px);
+    }
   }
 }
-
 .products-detail__top{
   display: flex;
   column-gap: rem(26px);
@@ -60,10 +59,9 @@
       font-size: rem(11px);
       padding: rem(8px) rem(24px);
   }
-}
-
-.products-detail__status.products-detail__status--stop{
-  background-color: $gray2;   
+  &.products-detail__status--stop{
+    background-color: $gray2;   
+  }
 }
 
 .products-detail__text{
