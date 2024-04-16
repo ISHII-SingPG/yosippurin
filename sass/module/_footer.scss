@@ -1,6 +1,3 @@
-
-@use "../base/base";
-@use "../base/reset";
 @use "../global" as *;
 
 // フッター
@@ -8,7 +5,7 @@
   width: 100%;
 }
 
-.footer__nav-wrap{
+.footer__nav-wrap {
   position: relative;
   background-color: $yellow;
   display: flex;
@@ -16,11 +13,11 @@
   justify-content: center;
   height: rem(154px);
   @include mq("md") {
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      height: auto;
-      padding: rem(38px) 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    padding: rem(38px) 0;
   }
 }
 
@@ -38,26 +35,26 @@
   justify-content: center;
   height: inherit;
   @include mq("md") {
-      flex-direction: column;
-      align-items: baseline;
-      margin-left: rem(25px);
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: rem(25px);
   }
 }
 
 .footer__item:not(:first-child) {
   margin-left: rem(60px);
   @include mq("lg") {
-      margin-left: rem(30px);
+    margin-left: rem(30px);
   }
   @include mq("md") {
-      margin-left: 0;
+    margin-left: 0;
   }
 }
 
 .footer__item {
   height: inherit;
   @include mq("lg") {
-      height: rem(53px);
+    height: rem(53px);
   }
 }
 
@@ -71,7 +68,7 @@
   height: inherit;
 }
 
-.footer__deco{
+.footer__deco {
   position: absolute;
   bottom: 0;
   right: rem(25px);
@@ -80,20 +77,20 @@
 .footer__deco-img {
   width: rem(190px);
   @include mq("lg") {
-      width: rem(142px);
+    width: rem(142px);
   }
 }
 
-.footer__content{
+.footer__content {
   background-color: $brown2;
   padding-top: rem(35px);
   padding-bottom: rem(22px);
   @include mq("md") {
-      padding-bottom: rem(86px);
+    padding-bottom: rem(86px);
   }
 }
 
-.footer__content-inner{
+.footer__content-inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,7 +107,7 @@
   column-gap: 20px;
   margin-top: rem(4px);
   @include mq("md") {
-      margin-top: rem(12px);
+    margin-top: rem(12px);
   }
 }
 
@@ -119,7 +116,7 @@
   font-size: rem(22px);
 }
 
-.footer__privacy-policy-link{
+.footer__privacy-policy-link {
   font-size: rem(12px);
   font-weight: $regular;
   letter-spacing: 0.05em;
@@ -136,7 +133,7 @@
   align-items: center;
   margin-top: rem(27px);
   @include mq("md") {
-      font-size: rem(12px);
-      margin-top: rem(20px);
+    font-size: rem(12px);
+    margin-top: rem(20px);
   }
 }

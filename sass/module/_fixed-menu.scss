@@ -1,5 +1,3 @@
-@use "../base/base";
-@use "../base/reset";
 @use "../global" as *;
 
 .pc-shop-button__warpper {
@@ -37,9 +35,9 @@
   padding: rem(23px) rem(5px) 0 rem(30px);
 
   &:hover {
-      opacity: 1;
-      transition: .3s all;
-      background-color: $brown2;
+    opacity: 1;
+    transition: 0.3s all;
+    background-color: $brown2;
   }
 }
 
@@ -53,7 +51,6 @@
 .pc-shop-button__warpper.is-active .pc-shop-button__newline {
   display: none;
 }
-
 
 /*メニューをページ下部に固定*/
 .sp-shop-button__wrapper {
@@ -72,7 +69,6 @@
   padding: 0;
   margin: 0;
   width: 100%;
-
 }
 
 .sp-shop-button__wrapper .sp-shop-button__item {
@@ -107,7 +103,7 @@
   font-weight: $bold;
   letter-spacing: 0.4em;
   @include mq("sp") {
-      font-size: rem(12px);
+    font-size: rem(12px);
   }
 }
 
@@ -119,7 +115,7 @@
   color: $black;
 }
 
-.pc-pagetop-button__link{
+.pc-pagetop-button__link {
   position: fixed;
   bottom: rem(100px);
   right: 0;
@@ -138,10 +134,10 @@
   padding: rem(15px) rem(20px);
 
   &:hover {
-      opacity: 1;
-      transition: .3s all;
-      color: $white;
-      background-color: $brown;
+    opacity: 1;
+    transition: 0.3s all;
+    color: $white;
+    background-color: $brown;
   }
 }
 

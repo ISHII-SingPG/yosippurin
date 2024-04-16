@@ -12,6 +12,6 @@ $basepx 基準となるピクセル数
 $pixels 文字サイズ
 $height figma上のline-height
 =============================================== */
-@function calcLineHeight($pixels , $height) {
+@function calcLineHeight($pixels, $height) {
   @return calc($height / $pixels);
 }
