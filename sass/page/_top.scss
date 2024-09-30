@@ -234,6 +234,25 @@
   }
 }
 
+.about__movie {
+  max-width: 560px;
+  margin: rem(60px) auto 0;
+}
+
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include mq("md") {
+    padding: 0 rem(20px);
+  }
+}
+
 /****************************************/
 // News
 /****************************************/

@@ -64,8 +64,12 @@
           </picture>
         </div>
       </div>
+        <div class="about__movie">
+          <div class="video-wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OXbYYmSkapM?si=Qh0d__LA-KPj-IVe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+      </div>
     </section>
-
     <!-- News -->
     <section id="news" class="top-news">
       <?php echo get_heading_title(menu_news, slug_news); ?>
