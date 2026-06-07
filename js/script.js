@@ -55,7 +55,6 @@ $(function () {
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
-      // test
       pauseOnMouseEnter: true,
     },
     // 前後の矢印
